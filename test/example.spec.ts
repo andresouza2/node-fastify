@@ -50,8 +50,6 @@ describe('Transactions Route', () => {
         amount: 1000,
       }),
     ])
-
-    console.log(listTransactionsResponse.body)
   })
   it('should be able to get a specific transaction', async () => {
     const createTransactionResponse = await request(app.server)
@@ -82,8 +80,6 @@ describe('Transactions Route', () => {
         amount: 1000,
       }),
     )
-
-    console.log(getTransactionsResponse.body)
   })
   it('should be able to get the summary', async () => {
     const createTransactionResponse = await request(app.server)
