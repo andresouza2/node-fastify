@@ -85,7 +85,7 @@ describe('Transactions Route', () => {
 
     console.log(getTransactionsResponse.body)
   })
-  it.only('should be able to get the summary', async () => {
+  it('should be able to get the summary', async () => {
     const createTransactionResponse = await request(app.server)
       .post('/transactions')
       .send({
@@ -110,6 +110,6 @@ describe('Transactions Route', () => {
       .set('Cookie', cookies)
       .expect(200)
 
-    expect(summaryResponse.body.summary).toEqual([{ amount: 3000 }])
+    expect(summaryResponse.body.summary).toEqual({ amount: 3000 })
   })
 })
